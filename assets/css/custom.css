@@ -1,0 +1,42 @@
+.custom-hover {
+    transition: transform 0.4s ease, box-shadow 0.6s ease, border-radius 0.2s ease-in-out, opacity 0.4s ease;
+    opacity: 0.4;
+    filter:invert();
+}
+.custom-hover:hover {
+    transform: scale(1.035);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.123);
+    border-radius: 35px;
+    opacity: 0.9;
+}
+
+.custom-button {
+    width: 50px;
+    height: 30px; /* Adjust as needed */
+    background-color: #ffffff00; /* Button background color */
+    color: rgb(236, 236, 236); /* Text color */
+    border: #e44c65 0.5px solid; /* Border color and width */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 14px; /* Font size */
+    display: inline-flex; /* Center content */
+    justify-content: center; /* Center content */
+    align-items: center; /* Center content */
+    padding: 0; /* Remove padding */
+}
+
+.custom-button:hover {
+    background-color: #e44c65; /* Background color on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.custom-button:hover .fa-arrow-up {
+    color: rgb(236, 236, 236); /* Change icon color to gray on hover */
+}
+
+.custom-button:active {
+    background-color: #0e0e0e00; /* Background color on click */
+    transform: scale(0.95); /* Slightly decrease size on click */
+}
+

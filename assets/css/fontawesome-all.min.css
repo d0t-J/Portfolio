@@ -364,6 +364,10 @@
 }
 .fa-arrow-circle-up:before {
   content: "\f0aa";
+  color: #eee;
+}
+.fa-arrow-circle-up:after {
+  content: "\f0aa";
 }
 .fa-arrow-down:before {
   content: "\f063";
