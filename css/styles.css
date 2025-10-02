@@ -1,0 +1,51 @@
+#hero {
+    background-color: #0b0b0b;
+}
+
+.container {
+    z-index: 1;
+}
+
+.lead {
+    --delay: 0.12s;
+}
+
+/* hero background using overlay via pseudo-element */
+#hero {
+    position: relative;
+    overflow: hidden;
+}
+#hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image: linear-gradient(
+            rgba(10, 10, 10, 0.55),
+            rgba(199, 248, 255, 0.55)
+        ),
+        url("../assets/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(0);
+}
+
+/* simple entrance animation (GPU-friendly) */
+@keyframes fadeUp {
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.animate-in {
+    transform: translateY(24px);
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+    .animate-in {
+        animation: none;
+        transform: none;
+        opacity: 1;
+    }
+}
